@@ -1,4 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
+    basic.showNumber(receivedNumber)
     if (receivedNumber == 1) {
         kitronik_servo_lite.left()
     } else if (receivedNumber == 2) {
@@ -7,7 +8,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.forward()
     }
 })
-kitronik_servo_lite.setDistancePerSecond(1000)
+kitronik_servo_lite.setDistancePerSecond(3000)
 radio.setGroup(1)
 basic.forever(function () {
 	
